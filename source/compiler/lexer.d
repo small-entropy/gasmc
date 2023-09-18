@@ -12,18 +12,19 @@ public struct Operation {
 public class LineLexer {
   private DList!Operation operations;
   private ulong size;
+  
   this()
   {
     operations = DList!Operation();
   }
 
-  public void addOperation(ref char[] instruction, ref char[] value) {
+  @safe public void addOperation(ref char[] instruction, ref char[] value) {
     auto oper = Operation(instruction, value);
     operations.insertFront(oper);
     size++;
   }
 
-  public ulong getSize()
+  @safe public ulong getSize()
   {
     return size; 
   }

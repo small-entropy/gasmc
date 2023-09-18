@@ -47,7 +47,7 @@ public class Parser
     numberOfOperations = lineLexer.getSize();
   }
 
-  public void parse(File* file) {
+  public void parse(ref File file) {
     auto range = file.byLine();
     foreach (line; range)
     {

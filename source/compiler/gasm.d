@@ -25,12 +25,7 @@ public class GasmCompiler {
 
   public void read() {
     auto file = File(pathIn);
-    parser.parse(&file);
-    // auto range = file.byLine();
-    // foreach (line; range)
-    // {
-    //   parser.parseLine(&line);
-    // }
+    parser.parse(file);
   }
 
   @safe public void setPathIn(string pathIn) 
