@@ -1,0 +1,12 @@
+; Объявляем процедуру ;
+Procedure Test.
+Var x.
+Var y.
+Add.
+Push x.
+Push y.
+End.
+;Исполняемый код;
+Call Test.
+Push 10.
+Push 2.

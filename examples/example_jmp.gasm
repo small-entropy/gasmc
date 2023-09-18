@@ -1,0 +1,15 @@
+; Сложение двух чисел в стеке ;
+Push 1.
+Push 2.
+Push 3.
+Push 4.
+Push 5.
+Jmp -1.
+Push 6.
+Push 7.
+Push 8.
+Push 9.
+Jmp 3.
+Push 10.
+Push 11.
+Push 12.

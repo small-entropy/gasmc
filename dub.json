@@ -1,0 +1,13 @@
+{
+	"authors": [
+		"Dmitrii Shevelev"
+	],
+	"copyright": "Copyright © 2023, Dmitrii Shevelev",
+	"dependencies": {
+		"jcli": "~>0.24.0",
+		"silly": "~>1.1.1"
+	},
+	"description": "A minimal D application.",
+	"license": "GNU GPLv3",
+	"name": "gasmc"
+}
