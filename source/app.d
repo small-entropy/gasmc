@@ -1,6 +1,13 @@
 import std.stdio;
+import jcli : CommandLineInterface, CommandDefault, ArgPositional;
+import cli.commands;
 
-void main()
+int main(string[] args)
 {
-	writeln("Edit source/app.d to start your project.");
+	auto executor = new CommandLineInterface!(cli.commands)();
+	const statusCode = executor.parseAndExecute(args);
+
+	writefln("Program exited with status code %s", statusCode);
+
+	return 0;
 }
