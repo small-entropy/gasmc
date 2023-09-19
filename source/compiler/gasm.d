@@ -4,7 +4,8 @@ import std.stdio : File, writeln;
 import std.string;
 import compiler.parser : Parser;
 
-public class GasmCompiler {
+public class GasmCompiler 
+{
   private string pathIn;
   private string pathOut;
   private Parser parser;

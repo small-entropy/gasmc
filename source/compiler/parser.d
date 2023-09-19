@@ -18,9 +18,11 @@ public class Parser
     lineLexer = new LineLexer();
   }
 
-  private void parseLine(char[]* line) {
+  private void parseLine(char[]* line) 
+  {
     char[] instruction;
     char[] value;
+    bool endOpt = false;
 
     auto iapp = appender(&instruction);
     auto vapp = appender(&value);
@@ -32,12 +34,16 @@ public class Parser
       else
       {
         if (ch == ReservedSymbols.Space) {
-          iapp.put(ch);
+          endOpt = true;
         }
         else
         {
           if (ch != ReservedSymbols.Carret) {
-            vapp.put(ch);
+           if (endOpt) {
+             iapp.put(ch);
+           } else {
+             vapp.put(ch);
+           }
           }
         }
       }
@@ -47,7 +53,8 @@ public class Parser
     numberOfOperations = lineLexer.getSize();
   }
 
-  public void parse(ref File file) {
+  public void parse(ref File file) 
+  {
     auto range = file.byLine();
     foreach (line; range)
     {
